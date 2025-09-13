@@ -17,15 +17,15 @@ find_package(glfw3 REQUIRED)
 # Add our executable.
 # The first argument is the name we want to give our program.
 # The next arguments are the source files needed to build it.
-add_executable(my_app src/3.shaders/shaders_class.cpp src/glad.c)
+add_executable(my_app src/4.textures/textures.cpp src/stb_image.cpp src/glad.c)
 
 # Tell our executable where to find its header files.
 # In our case, the "include" folder.
 target_include_directories(my_app PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
 
-file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/src/3.shaders/shader.vs 
+file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/src/4.textures/texture.vs 
      DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
-file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/src/3.shaders/shader.fs 
+file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/src/4.textures/texture.fs 
      DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
 
 # Link the necessary libraries to our executable.

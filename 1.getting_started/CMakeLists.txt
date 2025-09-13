@@ -17,7 +17,7 @@ find_package(glfw3 REQUIRED)
 # Add our executable.
 # The first argument is the name we want to give our program.
 # The next arguments are the source files needed to build it.
-add_executable(my_app src/Hello_rectangle.cpp src/glad.c)
+add_executable(my_app src/shaders_uniform.cpp src/glad.c)
 
 # Tell our executable where to find its header files.
 # In our case, the "include" folder.
